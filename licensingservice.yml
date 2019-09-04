@@ -1,0 +1,30 @@
+example.property: "I AM THE DEFAULT"
+#spring.jpa.database: "POSTGRESQL"
+#spring.datasource.platform:  "postgres"
+#spring.jpa.show-sql: "true"
+#spring.database.driverClassName: "org.postgresql.Driver"
+#spring.datasource.url: "jdbc:postgresql://192.168.99.100:5432/eagle_eye_local"
+#spring.datasource.username: "postgres"
+#spring.datasource.password: "p0stgr@s"
+#spring.datasource.testWhileIdle: "true"
+#spring.datasource.validationQuery: "SELECT 1"
+#spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+
+spring:
+  datasource:
+    url: jdbc:h2:~/test
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 123456
+
+  #    schema: classpath:db/schema.sql
+  #    data: classpath:db/data.sql
+  jpa:
+    database: h2
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
